@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: #0d1117;
+    color: #e6edf3;
+}
+
+header {
+    background-color: #161b22;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, h2, h3 {
+    color: #58a6ff;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #c9d1d9;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover, .active {
+    color: #58a6ff;
+}
+
+.hero {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.profile {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #58a6ff;
+}
+
+.intro, section {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.project {
+    background-color: #161b22;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    transition: transform 0.2s;
+}
+
+.project:hover {
+    transform: scale(1.02);
+}
+
+.skills li {
+    margin: 0.5rem 0;
+}
+
+.cv-btn {
+    display: inline-block;
+    padding: 0.7rem 1.2rem;
+    background-color: #58a6ff;
+    color: #0d1117;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cv-btn:hover {
+    background-color: #79c0ff;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #161b22;
+    color: #8b949e;
+    font-size: 0.9rem;
+}

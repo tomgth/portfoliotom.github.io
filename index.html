@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de Tom Gautheron, étudiant en BTS SIO SISR, passionné par les systèmes, réseaux et informatique."> <!-- Ajout pour SEO -->
+  <meta name="keywords" content="portfolio, Tom Gautheron, BTS SIO, SISR, réseaux, informatique"> <!-- Ajout pour SEO -->
   <title>Portfolio – Tom Gautheron</title>
   <link rel="stylesheet" href="style.css">
+  <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> --> <!-- Décommente si tu as un favicon -->
   <style>
     html {
       scroll-behavior: smooth;
@@ -13,16 +16,17 @@
 </head>
 <body>
   <header>
-    <h1 class="glow-title">Portfolio <span>Tom Gautheron</span></h1>
+    <h1 class="glow-title">Portfolio – <span>Tom Gautheron</span></h1>
     <nav>
       <a href="#presentation">Présentation</a>
+      <a href="#competences">Compétences</a> <!-- Nouveau lien pour la section ajoutée -->
       <a href="#documents">Mes documents</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <main>
-    <section id="presentation" class="section">
+    <section id="presentation" class="section fade-in"> <!-- Ajout de classe pour animation fade-in -->
       <h2>Présentation</h2>
       <p><strong>Portfolio – Tom Gautheron</strong></p>
 
@@ -48,7 +52,19 @@
       Je suis une personne <strong>sociable, sérieuse, sympathique et curieuse</strong>, toujours prête à apprendre et à relever de nouveaux défis dans le domaine de l’informatique.</p>
     </section>
 
-    <section id="documents" class="section">
+    <!-- Nouvelle section Compétences ajoutée -->
+    <section id="competences" class="section fade-in">
+      <h2>Compétences</h2>
+      <p>Voici un aperçu de mes compétences techniques acquises lors de mes formations et expériences :</p>
+      <ul class="skills-list">
+        <li>Réseaux : VLAN, Routage, Spanning Tree, Cisco</li>
+        <li>Systèmes : Maintenance, Sécurité, Support technique</li>
+        <li>Autres : Électronique, Informatique générale, Travail en équipe</li>
+      </ul>
+      <!-- Tu peux ajouter plus d'items ou des barres de progression en CSS si tu veux -->
+    </section>
+
+    <section id="documents" class="section fade-in">
       <h2>Mes documents</h2>
       <p>Tu peux télécharger ci-dessous mon CV et mes dossiers de BTS :</p>
 
@@ -59,7 +75,7 @@
       </div>
     </section>
 
-    <section id="contact" class="section">
+    <section id="contact" class="section fade-in">
       <h2>Me contacter</h2>
       <p>📧 <strong>Email :</strong> <a href="mailto:tom.gauther@gmail.com">tom.gauther@gmail.com</a></p>
       <p>🔗 <strong>GitHub :</strong> <a href="https://github.com/tomgth" target="_blank">tomgth</a></p>

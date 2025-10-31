@@ -4,85 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio – Tom Gautheron</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f6f9;
-      margin: 0;
-      padding: 0;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    header {
-      background-color: #2b4eff;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2em;
-    }
-
-    main {
-      max-width: 900px;
-      margin: 40px auto;
-      background: white;
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    h2 {
-      color: #2b4eff;
-      border-bottom: 2px solid #2b4eff;
-      padding-bottom: 5px;
-      margin-bottom: 20px;
-    }
-
-    ul {
-      margin-top: 10px;
-      margin-bottom: 20px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 15px;
-      background-color: #2b4eff;
-      color: white;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      font-size: 0.9em;
-    }
-
-    @media (max-width: 600px) {
-      main {
-        margin: 20px;
-        padding: 20px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Présentation – Tom Gautheron</h1>
+    <h1>Portfolio – Tom Gautheron</h1>
+    <nav>
+      <a href="#presentation">Présentation</a>
+      <a href="#documents">Mes documents</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <main>
+  <section id="presentation" class="section">
     <h2>À propos de moi</h2>
-    <p>Je me présente, <strong>Tom Gautheron</strong>, né en 2006 et originaire de <strong>Rennes</strong>.
-    Passionné par l’informatique depuis plusieurs années, j’ai toujours été intéressé par la compréhension du fonctionnement des systèmes, des réseaux et du matériel informatique.</p>
+    <p>Je m'appelle <strong>Tom Gautheron</strong>, né en 2006 et originaire de <strong>Rennes</strong>. 
+    Passionné par l’informatique, j’ai choisi de suivre un <strong>BTS SIO option SISR</strong> (Solutions d’Infrastructure, Systèmes et Réseaux) à <strong>MyESUP Rennes</strong>.
+    Actuellement en alternance chez <strong>SVA Jean Rozé (Agromousquetaires)</strong> à <strong>Vitré</strong>, j’y ai acquis de solides compétences dans les domaines des réseaux, systèmes et infrastructures informatiques.</p>
 
-    <p>J’ai débuté mon parcours au <strong>lycée professionnel</strong>, où j’ai choisi la spécialité <strong>Systèmes Numériques</strong>, option <strong>ARED</strong> (Audiovisuel, Réseaux et Équipements Domestiques).
-    Ce choix m’a permis d’acquérir des bases solides dans les domaines de l’électronique, de la maintenance et des réseaux, tout en développant ma rigueur et ma curiosité technique.
-    J’ai obtenu mon <strong>baccalauréat professionnel Systèmes Numériques</strong> en <strong>2024</strong>.</p>
+    <p>Mon parcours m’a permis de participer à différents projets concrets, comme la mise en place de <strong>VLANs</strong>, du <strong>routage inter-VLAN</strong> ou encore du <strong>protocole Spanning Tree</strong> sur des équipements Cisco.</p>
 
-    <p>Souhaitant approfondir mes connaissances dans le domaine de l’informatique, je me suis orienté vers un <strong>BTS SIO</strong> (Services Informatiques aux Organisations), option <strong>SISR</strong> (Solutions d’Infrastructure, Systèmes et Réseaux), à l’école <strong>MyESUP de Rennes</strong>.
-    J’ai eu l’opportunité d’effectuer ce BTS en <strong>alternance</strong> au sein de l’entreprise <strong>SVA Jean Rozé (Agromousquetaires)</strong> à <strong>Vitré</strong>, où j’ai pu mettre en pratique mes compétences techniques et découvrir le fonctionnement d’un réseau d’entreprise à grande échelle.</p>
+    <p>Je suis une personne <strong>sérieuse, sociable et curieuse</strong>, toujours prête à apprendre et à progresser dans le domaine de l’informatique.</p>
+  </section>
 
-    <h2>Mes projets</h2>
-    <p>Au cours de ces deux années, j’ai travaillé sur plusieurs projets conc
+  <section id="documents" class="section">
+    <h2>Mes documents</h2>
+    <p>Tu peux télécharger ci-dessous mon CV et mes dossiers de BTS :</p>
+
+    <div class="buttons">
+      <a href="cv.pdf" download class="btn">📄 Télécharger mon CV</a>
+      <a hre

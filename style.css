@@ -5,10 +5,9 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  position: relative; /* Pour effets de particules si ajoutés plus tard */
+  position: relative;
 }
 
-/* Ajout d'un effet de particules techno en background (pur CSS, simple) */
 body::before {
   content: "";
   position: absolute;
@@ -32,33 +31,33 @@ header {
   background: transparent;
 }
 
-.glow-title {
+/* TITRE SANS AUCUN NÉON - COULEURS SOLIDES SEULEMENT */
+.title {
   font-size: 3.2rem;
   font-weight: 800;
-  color: #00d4ff; /* Couleur solide, sans shadow */
+  color: #00d4ff;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 15px;
-  /* Animation glow supprimée pour éviter l'intensité */
+  text-shadow: none !important;
 }
 
-.glow-title span {
-  color: #5effc3; /* Couleur solide, sans shadow */
+.title span {
+  color: #5effc3;
+  text-shadow: none !important;
 }
-
-/* Animation glowPulse supprimée entièrement */
 
 nav {
   margin-top: 25px;
-  display: flex; /* Pour responsive */
+  display: flex;
   justify-content: center;
-  flex-wrap: wrap; /* Permet de stacker sur mobile */
+  flex-wrap: wrap;
 }
 
 nav a {
   color: #a8cfff;
   text-decoration: none;
-  margin: 0 18px 10px; /* Ajout de margin-bottom pour stack */
+  margin: 0 18px 10px;
   font-weight: 600;
   font-size: 1.1rem;
   transition: all 0.3s ease;
@@ -82,7 +81,7 @@ nav a:hover::after {
 
 nav a:hover {
   color: #5effc3;
-  transform: scale(1.1) rotate(2deg); /* Ajout d'un petit rotate pour plus de dynamisme */
+  transform: scale(1.1);
 }
 
 .section {
@@ -92,17 +91,16 @@ nav a:hover {
   max-width: 900px;
   margin: 60px auto;
   padding: 40px;
-  transition: transform 0.3s ease, border-color 0.3s ease; /* Remplacé box-shadow par border-color pour subtilité */
-  opacity: 0; /* Pour fade-in */
-  transform: translateY(20px); /* Pour fade-in */
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
 }
 
 .section:hover {
   transform: translateY(-5px);
-  border-color: rgba(0, 255, 255, 0.5); /* Effet hover plus doux */
+  border-color: rgba(0, 255, 255, 0.5);
 }
 
-/* Animation fade-in au scroll */
 .fade-in {
   animation: fadeIn 1s ease forwards;
 }
@@ -122,7 +120,6 @@ h2 {
   margin-bottom: 20px;
 }
 
-/* Style pour la nouvelle liste de compétences */
 .skills-list {
   list-style: none;
   padding: 0;
@@ -155,13 +152,13 @@ h2 {
   font-weight: 700;
   text-decoration: none;
   transition: all 0.3s ease;
-  border: 1px solid rgba(0, 255, 255, 0.3); /* Ajout bordure subtile au lieu de shadow */
+  border: 1px solid rgba(0, 255, 255, 0.3);
 }
 
 .btn:hover {
   background: linear-gradient(90deg, #5effc3, #00d4ff);
   transform: scale(1.08);
-  border-color: rgba(94, 255, 195, 0.5); /* Hover sur bordure */
+  border-color: rgba(94, 255, 195, 0.5);
 }
 
 footer {
@@ -174,14 +171,14 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Media queries pour responsive */
+/* RESPONSIVE */
 @media (max-width: 768px) {
-  .glow-title {
-    font-size: 2.5rem; /* Réduction pour mobile */
+  .title {
+    font-size: 2.5rem;
   }
 
   nav {
-    flex-direction: column; /* Stacker verticalement */
+    flex-direction: column;
   }
 
   nav a {
@@ -190,7 +187,7 @@ footer {
   }
 
   .section {
-    padding: 20px; /* Moins de padding sur mobile */
+    padding: 20px;
     margin: 30px 10px;
   }
 
@@ -199,7 +196,7 @@ footer {
   }
 
   .buttons {
-    flex-direction: column; /* Stacker boutons sur mobile */
+    flex-direction: column;
     align-items: center;
   }
 }
@@ -209,7 +206,7 @@ footer {
     padding: 40px 10px 20px;
   }
 
-  .glow-title {
+  .title {
     font-size: 2rem;
   }
 }

@@ -35,23 +35,18 @@ header {
 .glow-title {
   font-size: 3.2rem;
   font-weight: 800;
-  color: #00d4ff;
+  color: #00d4ff; /* Couleur solide, sans shadow */
   text-transform: uppercase;
-  text-shadow: 0 0 15px #00d4ff, 0 0 40px #0077ff;
   letter-spacing: 2px;
   margin-bottom: 15px;
-  animation: glowPulse 3s infinite alternate;
+  /* Animation glow supprimée pour éviter l'intensité */
 }
 
 .glow-title span {
-  color: #5effc3;
-  text-shadow: 0 0 15px #5effc3, 0 0 40px #00d4ff;
+  color: #5effc3; /* Couleur solide, sans shadow */
 }
 
-@keyframes glowPulse {
-  0% { text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff; }
-  100% { text-shadow: 0 0 20px #5effc3, 0 0 40px #5effc3; }
-}
+/* Animation glowPulse supprimée entièrement */
 
 nav {
   margin-top: 25px;
@@ -97,15 +92,14 @@ nav a:hover {
   max-width: 900px;
   margin: 60px auto;
   padding: 40px;
-  box-shadow: 0 0 25px rgba(0, 255, 255, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease; /* Remplacé box-shadow par border-color pour subtilité */
   opacity: 0; /* Pour fade-in */
   transform: translateY(20px); /* Pour fade-in */
 }
 
 .section:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+  border-color: rgba(0, 255, 255, 0.5); /* Effet hover plus doux */
 }
 
 /* Animation fade-in au scroll */
@@ -161,13 +155,13 @@ h2 {
   font-weight: 700;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 0 10px #00d4ff;
+  border: 1px solid rgba(0, 255, 255, 0.3); /* Ajout bordure subtile au lieu de shadow */
 }
 
 .btn:hover {
   background: linear-gradient(90deg, #5effc3, #00d4ff);
   transform: scale(1.08);
-  box-shadow: 0 0 20px #5effc3;
+  border-color: rgba(94, 255, 195, 0.5); /* Hover sur bordure */
 }
 
 footer {

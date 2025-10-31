@@ -28,14 +28,14 @@ header {
 }
 
 .glow-title span {
-  color: #00ff9d;
-  text-shadow: 0 0 15px #00ff9d, 0 0 40px #00d4ff;
+  color: #5effc3;
+  text-shadow: 0 0 15px #5effc3, 0 0 40px #00d4ff;
 }
 
 /* Animation de pulsation du titre */
 @keyframes glowPulse {
   0% { text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff; }
-  100% { text-shadow: 0 0 20px #00ff9d, 0 0 40px #00ff9d; }
+  100% { text-shadow: 0 0 20px #5effc3, 0 0 40px #5effc3; }
 }
 
 /* -------- Navigation -------- */
@@ -60,7 +60,7 @@ nav a::after {
   height: 2px;
   bottom: -5px;
   left: 0;
-  background: linear-gradient(90deg, #00d4ff, #00ff9d);
+  background: linear-gradient(90deg, #00d4ff, #5effc3);
   transition: width 0.3s;
 }
 
@@ -69,7 +69,7 @@ nav a:hover::after {
 }
 
 nav a:hover {
-  color: #00ff9d;
+  color: #5effc3;
   transform: scale(1.1);
 }
 
@@ -91,7 +91,7 @@ nav a:hover {
 }
 
 h2 {
-  color: #00ff9d;
+  color: #5effc3;
   font-size: 1.8rem;
   border-bottom: 2px solid #00d4ff;
   padding-bottom: 8px;
@@ -107,7 +107,7 @@ h2 {
 }
 
 .btn {
-  background: linear-gradient(90deg, #00d4ff, #00ff9d);
+  background: linear-gradient(90deg, #00d4ff, #5effc3);
   color: #0a0f1f;
   padding: 12px 25px;
   border-radius: 8px;
@@ -118,9 +118,9 @@ h2 {
 }
 
 .btn:hover {
-  background: linear-gradient(90deg, #00ff9d, #00d4ff);
+  background: linear-gradient(90deg, #5effc3, #00d4ff);
   transform: scale(1.08);
-  box-shadow: 0 0 20px #00ff9d;
+  box-shadow: 0 0 20px #5effc3;
 }
 
 /* -------- Footer -------- */

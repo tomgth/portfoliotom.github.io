@@ -5,15 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio – Tom Gautheron</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    html {
+      scroll-behavior: smooth; /* rend les liens du menu fluides */
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Portfolio – Tom Gautheron</h1>
-    <nav>
-      <a href="#presentation">Présentation</a>
-      <a href="#documents">Mes documents</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <div class="header-content">
+      <img src="photo_profil.jpg" alt="Photo de Tom Gautheron" class="profile-img">
+      <div>
+        <h1>Portfolio – Tom Gautheron</h1>
+        <nav>
+          <a href="#presentation">Présentation</a>
+          <a href="#documents">Mes documents</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
   </header>
 
   <section id="presentation" class="section">
@@ -33,4 +43,19 @@
 
     <div class="buttons">
       <a href="cv.pdf" download class="btn">📄 Télécharger mon CV</a>
-      <a hre
+      <a href="dossier_E5.pdf" download class="btn">📘 Dossier E5</a>
+      <a href="dossier_E6.pdf" download class="btn">📗 Dossier E6</a>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Me contacter</h2>
+    <p>📧 <strong>Email :</strong> tom.gautheron@example.com</p>
+    <p>🔗 <strong>GitHub :</strong> <a href="https://github.com/tomgth" target="_blank">tomgth</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 – Tom Gautheron | BTS SIO SISR | Portfolio</p>
+  </footer>
+</body>
+</html>

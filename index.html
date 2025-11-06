@@ -3,132 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio de Tom Gautheron, étudiant en BTS SIO SISR, passionné par les systèmes, réseaux et informatique.">
-  <meta name="keywords" content="portfolio, Tom Gautheron, BTS SIO, SISR, réseaux, informatique">
   <title>Portfolio – Tom Gautheron</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Font Awesome pour les icônes -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
 </head>
 <body>
   <header>
     <h1 class="main-title">PORTFOLIO – <span>TOM GAUTHERON</span></h1>
     <nav>
-      <a href="#presentation">Présentation</a>
-      <a href="#experiences">Expériences</a>
-      <a href="#competences">Compétences</a>
-      <a href="#projets">Projets</a>
-      <a href="#documents">Mes documents</a>
-      <a href="#contact">Contact</a>
+      <a href="index.html">Accueil</a>
+      <a href="experiences.html">Expériences</a>
+      <a href="competences.html">Compétences</a>
+      <a href="projets.html">Projets</a>
+      <a href="documents.html">Documents</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <main>
-    <section id="presentation" class="section fade-in">
-      <div class="profile-header">
-        <img src="https://via.placeholder.com/200x200/0a0f1f/00d4ff?text=TG" alt="Photo de Tom Gautheron" class="profile-img">
-        <div class="profile-text">
-          <h2>Présentation</h2>
-          <p><strong>Portfolio – Tom Gautheron</strong></p>
-          <p>Je me présente, <strong>Tom Gautheron</strong>, né en 2006 et originaire de <strong>Rennes</strong>.<br>
-          Passionné par l’informatique depuis plusieurs années, j’ai toujours été intéressé par la compréhension du fonctionnement des systèmes, des réseaux et du matériel informatique.</p>
-          <p>J’ai débuté mon parcours au lycée professionnel, où j’ai choisi la spécialité <strong>Systèmes Numériques</strong>, option <strong>ARED</strong> (Audiovisuel, Réseaux et Équipements Domestiques).<br>
-          Ce choix m’a permis d’acquérir des bases solides dans les domaines de l’électronique, de la maintenance et des réseaux, tout en développant ma rigueur et ma curiosité technique.<br>
-          J’ai obtenu mon <strong>baccalauréat professionnel Systèmes Numériques</strong> en 2024.</p>
-          <p>Souhaitant approfondir mes connaissances dans le domaine de l’informatique, je me suis orienté vers un <strong>BTS SIO</strong> (Services Informatiques aux Organisations), option <strong>SISR</strong> (Solutions d’Infrastructure, Systèmes et Réseaux), à l’école <strong>MyESUP de Rennes</strong>.<br>
-          J’ai eu l’opportunité d’effectuer ce BTS en alternance au sein de l’entreprise <strong>SVA Jean Rozé (Agromousquetaires)</strong> à <strong>Vitré</strong>, où j’ai pu mettre en pratique mes compétences techniques et découvrir le fonctionnement d’un réseau d’entreprise à grande échelle.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Nouvelle section Expériences -->
-    <section id="experiences" class="section fade-in">
-      <h2>Expériences</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <h3>Alternance BTS SIO SISR – SVA Jean Rozé</h3>
-          <span class="date">2024 – 2025</span>
-          <p>Technicien réseau en alternance. Configuration de VLANs, routage inter-VLAN sur Cisco, mise en place de Spanning Tree pour la sécurité réseau. Support technique quotidien et maintenance d'infrastructures à grande échelle.</p>
-        </div>
-        <div class="timeline-item">
-          <h3>Bac Pro Systèmes Numériques – Lycée Professionnel</h3>
-          <span class="date">2021 – 2024</span>
-          <p>Formation en électronique, maintenance et réseaux (option ARED). Projets pratiques sur audiovisuel et équipements domestiques. Obtention du bac avec mention.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="competences" class="section fade-in">
-      <h2>Compétences</h2>
-      <p>Voici un aperçu de mes compétences techniques acquises lors de mes formations et expériences :</p>
-      <div class="skills-grid">
-        <div class="skill-item">
-          <label>Réseaux (Cisco, VLAN, Routage)</label>
-          <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
-        </div>
-        <div class="skill-item">
-          <label>Systèmes & Maintenance</label>
-          <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
-        </div>
-        <div class="skill-item">
-          <label>Sécurité Réseau</label>
-          <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
-        </div>
-        <div class="skill-item">
-          <label>Électronique & Support</label>
-          <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Nouvelle section Projets -->
-    <section id="projets" class="section fade-in">
-      <h2>Projets</h2>
-      <p>Quelques projets concrets réalisés lors de mes formations :</p>
-      <div class="projects-grid">
-        <div class="project-card">
-          <h3>Configuration VLAN Cisco</h3>
-          <p>Mise en place de VLANs et routage inter-VLAN pour segmenter un réseau d'entreprise.</p>
-          <!-- Placeholder pour image -->
-          <img src="https://via.placeholder.com/300x200/0a0f1f/00d4ff?text=VLAN" alt="Projet VLAN" class="project-img">
-        </div>
-        <div class="project-card">
-          <h3>Protocole Spanning Tree</h3>
-          <p>Implémentation pour éviter les boucles et sécuriser le trafic réseau.</p>
-          <img src="https://via.placeholder.com/300x200/0a0f1f/5effc3?text=STP" alt="Projet STP" class="project-img">
-        </div>
-        <div class="project-card">
-          <h3>Maintenance Systèmes</h3>
-          <p>Support technique et dépannage sur infrastructures Agromousquetaires.</p>
-          <img src="https://via.placeholder.com/300x200/0a0f1f/00d4ff?text=Maintenance" alt="Projet Maintenance" class="project-img">
-        </div>
-      </div>
-    </section>
-
-    <section id="documents" class="section fade-in">
-      <h2>Mes documents</h2>
-      <p>Tu peux télécharger ci-dessous mon CV et mes dossiers de BTS :</p>
-      <div class="buttons">
-        <a href="cv.pdf" download class="btn">Télécharger mon CV</a>
-        <a href="dossier_E5.pdf" download class="btn">Dossier E5</a>
-        <a href="dossier_E6.pdf" download class="btn">Dossier E6</a>
-      </div>
-    </section>
-
-    <section id="contact" class="section fade-in">
-      <h2 style="color: #ffffff;">Me contacter</h2>
-      <p><i class="fas fa-envelope icon"></i> <strong>Email :</strong> <a href="mailto:tom.gauther@gmail.com" class="contact-link">tom.gauther@gmail.com</a></p>
-      <p><i class="fab fa-github icon"></i> <strong>GitHub :</strong> <a href="https://github.com/tomgth" target="_blank" class="contact-link">tomgth</a></p>
+    <section class="section">
+      <h2>Présentation</h2>
+      <p>Je me présente, <strong>Tom Gautheron</strong>, né en 2006 et originaire de <strong>Rennes</strong>.</p>
+      <p>Passionné par l’informatique, les réseaux et les systèmes, j’ai choisi la voie technique dès le lycée avec le <strong>Bac Pro Systèmes Numériques</strong> (option ARED), obtenu en 2024.</p>
+      <p>Aujourd’hui en <strong>BTS SIO SISR</strong> en alternance chez <strong>SVA Jean Rozé (Agromousquetaires)</strong> à Vitré, je configure des VLANs, du routage, et sécurise des réseaux d’entreprise avec Cisco.</p>
+      <p>Curieux, rigoureux et sociable, je suis prêt à relever tous les défis techniques !</p>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 – Tom Gautheron | BTS SIO SISR | Portfolio</p>
+    <p>© 2025 – Tom Gautheron | BTS SIO SISR</p>
   </footer>
 </body>
 </html>

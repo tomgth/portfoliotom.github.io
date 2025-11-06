@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" class="experiences">
+<html lang="fr" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +7,12 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="experiences">
+  <div class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></div>
+  <div id="scrollTop"><i class="fas fa-arrow-up"></i></div>
+
   <header>
     <h1 class="main-title">EXPÉRIENCES</h1>
-    <nav>
-      <a href="index.html">Accueil</a>
-      <a href="experiences.html">Expériences</a>
-      <a href="competences.html">Compétences</a>
-      <a href="projets.html">Projets</a>
-      <a href="documents.html">Documents</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <nav><!-- même nav que index.html --></nav>
   </header>
 
   <main>
@@ -24,27 +20,25 @@
       <h2>Parcours Professionnel</h2>
 
       <div class="card">
-        <img src="https://www.sva-jeanroze.com/assets/images/logo-sva/logo.png" alt="SVA Jean Rozé" class="card-logo">
+        <img src="images/sva-logo.png" alt="SVA" class="card-logo">
         <div>
-          <h3>Technicien Systèmes & Réseaux en Alternance</h3>
-          <p class="date"><strong>SVA Jean Rozé (Agromousquetaires) – Vitré</strong> | Sept. 2023 – Juin 2025</p>
-          <p>Supervision et maintenance du réseau interne, configuration de switchs et routeurs Cisco, mise en place de VLANs et de routage inter-VLAN (Router-on-a-Stick), création et gestion des comptes utilisateurs sur Active Directory, assistance technique aux utilisateurs, sauvegarde, mise à jour et documentation de serveurs, participation à des projets d’évolution du réseau.</p>
-          <p>Compétences développées : rigueur, autonomie, travail d’équipe, communication technique et relation utilisateur, capacité à résoudre des incidents réseau et système.</p>
+          <h3>Technicien Réseaux & Systèmes</h3>
+          <p class="date"><strong>SVA Jean Rozé – Vitré</strong> | 2023-2025</p>
+          <p>Supervision réseau +1400 collaborateurs, VLANs, routage inter-VLAN, STP, Active Directory, support, sauvegardes.</p>
         </div>
       </div>
 
       <div class="card">
         <div>
-          <h3>Bac Pro Systèmes Numériques – Option ARED</h3>
-          <p class="date"><strong>Lycée Professionnel – Rennes</strong> | 2021 – 2024</p>
-          <p>Apprentissage des bases de l’électronique, du réseau et de la programmation embarquée. Projets pratiques sur audiovisuel et équipements domestiques. Obtention du baccalauréat avec mention.</p>
+          <h3>Bac Pro Systèmes Numériques – ARED</h3>
+          <p class="date"><strong>Lycée Pro – Rennes</strong> | 2021-2024</p>
+          <p>Électronique, réseaux, audiovisuel. Obtention avec mention.</p>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <p>© 2025 – Tom Gautheron</p>
-  </footer>
+  <footer><p>© 2025 – Tom Gautheron</p></footer>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -61,10 +61,7 @@ nav a:hover { color:var(--accent2); background:rgba(94,255,195,.15); border-colo
 }
 .section.visible { opacity:1; transform:none; }
 
-h2 {
-  color:var(--accent2); text-align:center; font-size:2.1rem; margin-bottom:32px;
-  padding-bottom:14px; border-bottom:2px solid var(--accent1);
-}
+h2 { color:var(--accent2); text-align:center; font-size:2.1rem; margin-bottom:32px; padding-bottom:14px; border-bottom:2px solid var(--accent1); }
 
 .card {
   background:rgba(255,255,255,.1); padding:30px; border-radius:18px;
@@ -93,19 +90,10 @@ h2 {
 }
 .btn:hover { background:linear-gradient(90deg,var(--accent2),var(--accent1)); transform:scale(1.07); }
 
-.quote {
-  font-style:italic; text-align:center; font-size:1.25rem; color:#a8cfff;
-  margin:50px 0; padding:25px; border-left:5px solid var(--accent2);
-  background:rgba(94,255,195,.08); border-radius:12px;
-}
+.quote { font-style:italic; text-align:center; font-size:1.25rem; color:#a8cfff; margin:50px 0; padding:25px; border-left:5px solid var(--accent2); background:rgba(94,255,195,.08); border-radius:12px; }
 
-footer {
-  text-align:center; padding:45px; color:#7aa7ff;
-  border-top:1px solid var(--border); background:rgba(0,10,25,.9);
-  margin-top:80px;
-}
+footer { text-align:center; padding:45px; color:#7aa7ff; border-top:1px solid var(--border); background:rgba(0,10,25,.9); margin-top:80px; }
 
-/* BOUTONS */
 .theme-toggle, #scrollTop {
   position:fixed; z-index:999; width:50px; height:50px; border-radius:50%;
   display:flex; align-items:center; justify-content:center; cursor:pointer;

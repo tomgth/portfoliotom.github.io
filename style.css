@@ -16,7 +16,7 @@ body {
   background-attachment: fixed;
 }
 
-/* === FOND ANIMÉ PAR PAGE === */
+/* === FOND PAR PAGE === */
 body { background-image: radial-gradient(circle at top right, #0a0f1f, #02060f 80%); }
 body.experiences { background-image: radial-gradient(circle at top left, #0f1a2e, #02060f 80%); }
 body.competences { background-image: radial-gradient(circle at bottom right, #1a0f2e, #02060f 80%); }
@@ -139,7 +139,7 @@ p, li {
   margin-bottom: 18px;
 }
 
-/* === CARTES PROJETS / EXPÉRIENCES === */
+/* === CARTES === */
 .card {
   background: rgba(0, 255, 255, 0.1);
   padding: 28px;
@@ -147,25 +147,12 @@ p, li {
   margin: 22px 0;
   border-left: 5px solid #00d4ff;
   transition: all 0.3s ease;
-  display: flex;
-  align-items: flex-start;
-  gap: 18px;
 }
 
 .card:hover {
   background: rgba(0, 255, 255, 0.18);
   border-left-color: #5effc3;
   transform: translateX(6px);
-}
-
-.card img {
-  width: 60px;
-  height: 60px;
-  border-radius: 12px;
-  object-fit: contain;
-  background: white;
-  padding: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 .card h3 {
@@ -286,7 +273,5 @@ footer {
   .main-title { font-size: 2.8rem; letter-spacing: 3px; }
   nav a { padding: 12px 18px; font-size: 1rem; }
   .section { padding: 35px; margin: 40px 15px; }
-  .card { flex-direction: column; text-align: center; }
-  .card img { margin: 0 auto 15px; }
   .competences-list li { flex-direction: column; text-align: center; }
 }

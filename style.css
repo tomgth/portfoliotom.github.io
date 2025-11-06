@@ -65,6 +65,13 @@ header {
   animation: fadeInUp 1s ease forwards;
 }
 
+.main-title span {
+  background: linear-gradient(90deg, #5effc3, #00d4ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 @keyframes fadeInUp {
   to { opacity: 1; transform: translateY(0); }
 }
@@ -139,7 +146,11 @@ p, li {
   margin-bottom: 18px;
 }
 
-/* === CARTES === */
+strong {
+  color: #5effc3;
+}
+
+/* === CARTES AVEC LOGOS === */
 .card {
   background: rgba(0, 255, 255, 0.1);
   padding: 28px;
@@ -147,12 +158,30 @@ p, li {
   margin: 22px 0;
   border-left: 5px solid #00d4ff;
   transition: all 0.3s ease;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
 }
 
 .card:hover {
   background: rgba(0, 255, 255, 0.18);
   border-left-color: #5effc3;
   transform: translateX(6px);
+}
+
+.card-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-logo {
+  transform: scale(1.1);
 }
 
 .card h3 {
@@ -165,6 +194,7 @@ p, li {
   color: #a8cfff;
   font-size: 0.95rem;
   margin-bottom: 10px;
+  font-weight: 600;
 }
 
 /* === COMPÉTENCES === */
@@ -273,5 +303,7 @@ footer {
   .main-title { font-size: 2.8rem; letter-spacing: 3px; }
   nav a { padding: 12px 18px; font-size: 1rem; }
   .section { padding: 35px; margin: 40px 15px; }
+  .card { flex-direction: column; text-align: center; }
+  .card-logo { margin: 0 auto 15px; }
   .competences-list li { flex-direction: column; text-align: center; }
 }

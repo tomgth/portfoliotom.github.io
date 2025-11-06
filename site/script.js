@@ -1,4 +1,3 @@
-// MODE CLAIR/SOMBRE
 const toggle = document.getElementById('themeToggle');
 const html = document.documentElement;
 toggle.addEventListener('click', () => {
@@ -13,16 +12,12 @@ if (localStorage.getItem('theme') === 'light') {
   toggle.querySelector('i').classList.replace('fa-moon', 'fa-sun');
 }
 
-// SCROLL TO TOP
 const scrollBtn = document.getElementById('scrollTop');
 window.addEventListener('scroll', () => {
   scrollBtn.classList.toggle('visible', window.scrollY > 300);
 });
 scrollBtn.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
 
-// ANIMATION AU SCROLL
 const sections = document.querySelectorAll('.section');
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => e.isIntersecting && e.target.classList.add('visible'));
-}, {threshold:0.1});
+const observer = new IntersectionObserver(e => e.forEach(en => en.isIntersecting && en.target.classList.add('visible'))), {threshold:0.1});
 sections.forEach(s => observer.observe(s));

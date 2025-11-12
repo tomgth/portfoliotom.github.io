@@ -1,3 +1,26 @@
+/* === VARIABLES CSS === */
+:root {
+  --bg-primary: #02060f;
+  --text-primary: #e0e7ff;
+  --accent1: #00d4ff;
+  --accent2: #5effc3;
+  --card-bg: rgba(255, 255, 255, 0.06);
+  --border: rgba(0, 255, 255, 0.3);
+  --hover-bg: rgba(0, 255, 255, 0.18);
+  --nav-bg: rgba(2, 6, 15, 0.9);
+}
+
+[data-theme="light"] {
+  --bg-primary: #f8f9fa;
+  --text-primary: #212529;
+  --accent1: #007bff;
+  --accent2: #28a745;
+  --card-bg: rgba(0, 0, 0, 0.06);
+  --border: rgba(0, 123, 255, 0.3);
+  --hover-bg: rgba(40, 167, 69, 0.15);
+  --nav-bg: rgba(248, 249, 250, 0.95);
+}
+
 /* === RESET & BASE === */
 * {
   margin: 0;
@@ -7,8 +30,8 @@
 
 body {
   font-family: 'Poppins', Arial, sans-serif;
-  background: #02060f;
-  color: #e0e7ff;
+  background: var(--bg-primary);
+  color: var(--text-primary);
   line-height: 1.8;
   overflow-x: hidden;
   position: relative;
@@ -42,12 +65,16 @@ body::before {
   100% { transform: translateY(-120px); }
 }
 
-/* === HEADER & TITRE ANIMÉ === */
+/* === HEADER & NAVIGATION STICKY === */
 header {
+  position: sticky;
+  top: 0;
   text-align: center;
-  padding: 80px 20px 50px;
-  z-index: 1;
-  position: relative;
+  padding: 20px 20px 10px;
+  z-index: 100;
+  background: var(--nav-bg);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 15px rgba(0,0,0,0.2);
 }
 
 .main-title {
@@ -55,7 +82,7 @@ header {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 5px;
-  background: linear-gradient(90deg, #00d4ff, #5effc3);
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -66,7 +93,7 @@ header {
 }
 
 .main-title span {
-  background: linear-gradient(90deg, #5effc3, #00d4ff);
+  background: linear-gradient(90deg, var(--accent2), var(--accent1));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -76,50 +103,57 @@ header {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* === NAVIGATION === */
 nav {
-  margin-top: 35px;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 14px;
+  gap: 12px;
   z-index: 1;
 }
 
 nav a {
-  color: #a8cfff;
+  color: var(--text-primary);
   text-decoration: none;
   font-weight: 600;
   font-size: 1.05rem;
-  padding: 14px 22px;
+  padding: 12px 20px;
   border-radius: 12px;
-  border: 1px solid rgba(0, 255, 255, 0.35);
+  border: 1px solid var(--border);
   background: rgba(0, 255, 255, 0.08);
   transition: all 0.3s ease;
   backdrop-filter: blur(4px);
 }
 
 nav a:hover {
-  color: #5effc3;
-  background: rgba(94, 255, 195, 0.2);
-  border-color: #5effc3;
+  color: var(--accent2);
+  background: var(--hover-bg);
+  border-color: var(--accent2);
   transform: translateY(-4px);
   box-shadow: 0 8px 20px rgba(94, 255, 195, 0.2);
 }
 
 /* === SECTION === */
 .section {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(0, 255, 255, 0.3);
+  background: var(--card-bg);
+  border: 1px solid var(--border);
   border-radius: 20px;
   max-width: 980px;
   margin: 60px auto;
   padding: 50px;
   position: relative;
   z-index: 1;
-  backdrop-filter: blur_help(8px);
+  backdrop-filter: blur(8px);
   transition: all 0.4s ease;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.8s ease;
 }
 
 .section:hover {
@@ -129,12 +163,12 @@ nav a:hover {
 }
 
 h2 {
-  color: #5effc3;
+  color: var(--accent2);
   text-align: center;
   font-size: 2rem;
   margin-bottom: 30px;
   padding-bottom: 12px;
-  border-bottom: 2px solid #00d4ff;
+  border-bottom: 2px solid var(--accent1);
   position: relative;
   opacity: 0;
   transform: translateY(20px);
@@ -147,26 +181,35 @@ p, li {
 }
 
 strong {
-  color: #5effc3;
+  color: var(--accent2);
 }
 
-/* === CARTES AVEC LOGOS === */
+/* === CARTES === */
 .card {
   background: rgba(0, 255, 255, 0.1);
   padding: 28px;
   border-radius: 16px;
   margin: 22px 0;
-  border-left: 5px solid #00d4ff;
+  border-left: 5px solid var(--accent1);
   transition: all 0.3s ease;
   display: flex;
   align-items: flex-start;
   gap: 20px;
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.6s ease;
 }
 
 .card:hover {
-  background: rgba(0, 255, 255, 0.18);
-  border-left-color: #5effc3;
-  transform: translateX(6px);
+  background: var(--hover-bg);
+  border-left-color: var(--accent2);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 212, 255, 0.2);
 }
 
 .card-logo {
@@ -185,7 +228,7 @@ strong {
 }
 
 .card h3 {
-  color: #00d4ff;
+  color: var(--accent1);
   margin: 0 0 8px;
   font-size: 1.3rem;
 }
@@ -197,7 +240,7 @@ strong {
   font-weight: 600;
 }
 
-/* === COMPÉTENCES === */
+/* === COMPÉTENCES AVEC PROGRESS BAR === */
 .competences-list {
   list-style: none;
   padding: 0;
@@ -211,8 +254,8 @@ strong {
   padding: 20px;
   border-radius: 14px;
   display: flex;
-  align-items: center;
-  gap: 16px;
+  flex-direction: column;
+  gap: 12px;
   transition: all 0.3s;
   border: 1px solid rgba(0, 255, 255, 0.2);
 }
@@ -220,14 +263,29 @@ strong {
 .competences-list li:hover {
   background: rgba(0, 255, 255, 0.22);
   transform: translateY(-3px);
-  border-color: #5effc3;
+  border-color: var(--accent2);
 }
 
 .competences-list i {
-  color: #00d4ff;
+  color: var(--accent1);
   font-size: 1.6rem;
   width: 45px;
   text-align: center;
+}
+
+.progress-bar {
+  background: rgba(0, 255, 255, 0.1);
+  border-radius: 10px;
+  height: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  height: 100%;
+  border-radius: 10px;
+  width: 0;
+  transition: width 1.2s ease;
 }
 
 /* === BOUTONS === */
@@ -240,37 +298,34 @@ strong {
 }
 
 .btn {
-  background: linear-gradient(90deg, #00d4ff, #5effc3);
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
   color: #0a0f1f;
   padding: 16px 34px;
   border-radius: 14px;
   font-weight: 700;
   text-decoration: none;
   transition: all 0.3s ease;
-  border: 1px solid rgba(0, 255, 255, 0.5);
+  border: 1px solid var(--border);
   font-size: 1.1rem;
 }
 
 .btn:hover {
-  background: linear-gradient(90deg, #5effc3, #00d4ff);
+  background: linear-gradient(90deg, var(--accent2), var(--accent1));
   transform: scale(1.07);
   box-shadow: 0 8px 25px rgba(94, 255, 195, 0.3);
 }
 
 /* === CONTACT === */
-.contact-link {
-  color: #ffffff !important;
+.contact p {
+  display: flex;
+  align-items: center;
+  gap: 14px;
   font-size: 1.15rem;
-  font-weight: 500;
-}
-
-.contact-link:hover {
-  color: #5effc3 !important;
+  margin-bottom: 20px;
 }
 
 .icon {
-  color: #00d4ff;
-  margin-right: 14px;
+  color: var(--accent1);
   font-size: 1.4rem;
 }
 
@@ -282,7 +337,7 @@ strong {
   color: #a8cfff;
   margin: 50px 0;
   padding: 25px;
-  border-left: 5px solid #5effc3;
+  border-left: 5px solid var(--accent2);
   background: rgba(94, 255, 195, 0.08);
   border-radius: 12px;
 }
@@ -292,18 +347,60 @@ footer {
   text-align: center;
   padding: 40px;
   color: #7aa7ff;
-  border-top: 1px solid rgba(0, 255, 255, 0.2);
+  border-top: 1px solid var(--border);
   background: rgba(0, 10, 25, 0.9);
   font-size: 0.95rem;
   margin-top: 70px;
 }
 
+/* === THEME TOGGLE & SCROLL TOP === */
+.theme-toggle, #scrollTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 212, 255, 0.2);
+  border: 1px solid var(--accent1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.theme-toggle:hover, #scrollTop:hover {
+  background: var(--accent1);
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
+}
+
+#scrollTop {
+  opacity: 0;
+  pointer-events: none;
+  bottom: 90px;
+}
+
+#scrollTop.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.theme-toggle i, #scrollTop i {
+  color: white;
+  font-size: 1.4rem;
+}
+
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
   .main-title { font-size: 2.8rem; letter-spacing: 3px; }
-  nav a { padding: 12px 18px; font-size: 1rem; }
+  nav a { padding: 10px 16px; font-size: 0.95rem; }
   .section { padding: 35px; margin: 40px 15px; }
   .card { flex-direction: column; text-align: center; }
   .card-logo { margin: 0 auto 15px; }
-  .competences-list li { flex-direction: column; text-align: center; }
+  .competences-list li { text-align: center; }
+  .competences-list i { margin-bottom: 10px; }
 }

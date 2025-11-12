@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact – Tom Gautheron</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body class="contact">
   <div class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></div>
   <div id="scrollTop"><i class="fas fa-arrow-up"></i></div>
+
   <header>
     <h1 class="main-title">CONTACT</h1>
     <nav>
@@ -20,13 +22,31 @@
       <a href="contact.html">Contact</a>
     </nav>
   </header>
+
   <main>
     <section class="section">
       <h2>Me Contacter</h2>
-      <p><i class="fas fa-envelope icon"></i> tom.gauther@gmail.com</p>
-      <p><i class="fab fa-linkedin icon"></i> github : tomgth</p>
+
+      <!-- Email avec logo SVG -->
+      <p style="display:flex; align-items:center; gap:16px;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4Z" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M22 6L12 13L2 6" stroke="#5effc3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <a href="mailto:tom.gauther@gmail.com" style="color:#e0e7ff; text-decoration:none; font-weight:500;">tom.gauther@gmail.com</a>
+      </p>
+
+      <!-- GitHub avec logo SVG -->
+      <p style="display:flex; align-items:center; gap:16px;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C6.48 2 2 6.48 2 12C2 16.42 5.05 20.04 9.12 21.39C9.56 21.47 9.72 21.19 9.72 20.95V19.2C6.78 19.8 6.23 17.9 6.23 17.9C5.82 16.82 5.22 16.53 5.22 16.53C4.4 15.94 5.28 15.96 5.28 15.96C6.19 16.04 6.68 16.9 6.68 16.9C7.5 18.3 8.82 17.9 9.75 17.66C9.88 16.98 10.21 16.54 10.57 16.26C8.18 15.97 5.66 14.96 5.66 11.08C5.66 9.92 6.1 8.98 6.8 8.24C6.66 7.96 6.26 6.9 6.92 5.54C6.92 5.54 7.72 5.26 9.7 6.46C10.46 6.24 11.24 6.13 12.02 6.12C12.8 6.13 13.58 6.24 14.34 6.46C16.32 5.26 17.12 5.54 17.12 5.54C17.78 6.9 17.38 7.96 17.24 8.24C17.94 8.98 18.38 9.92 18.38 11.08C18.38 14.96 15.86 15.97 13.47 16.26C13.92 16.62 14.32 17.32 14.32 18.38V20.95C14.32 21.19 14.48 21.47 14.92 21.39C18.99 20.04 22 16.42 22 12C22 6.48 17.52 2 12 2Z" fill="#5effc3"/>
+        </svg>
+        <a href="https://github.com/tomgth" target="_blank" style="color:#e0e7ff; text-decoration:none; font-weight:500;">github.com/tomgth</a>
+      </p>
+
     </section>
   </main>
+
   <footer><p>© 2026 – Tom Gautheron</p></footer>
   <script src="script.js"></script>
 </body>

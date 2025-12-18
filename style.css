@@ -272,3 +272,16 @@ footer {
   .card-logo { margin: 0 auto 15px; }
   .competences-list li { flex-direction: column; text-align: center; }
 }
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 1.2rem;
+  margin: 28px 0;
+}
+.contact-item a {
+  color: #e0e7ff;
+  text-decoration: none;
+}
+.contact-item a:hover { color: #5effc3; }
+.icon { color: #00d4ff; font-size: 1.7rem; width: 40px; text-align: center; }

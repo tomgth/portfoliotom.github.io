@@ -17,5 +17,5 @@ window.addEventListener('scroll', () => {
 });
 scrollBtn.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
 const sections = document.querySelectorAll('.section');
-const observer = new IntersectionObserver(e => e.forEach(en => en.isIntersecting && en.target.classList.add('visible'))), {threshold:0.1});
+const observer = new IntersectionObserver(e => e.forEach(en => en.isIntersecting && en.target.classList.add('visible')), {threshold:0.1});
 sections.forEach(s => observer.observe(s));
